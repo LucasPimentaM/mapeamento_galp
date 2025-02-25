@@ -67,7 +67,8 @@ usecols_report = [
 "PVT - Mass flow rate (kg/s)",
 "PVT - Heat transfer rate (W)",
 "ETC - Heat transfer rate (W)",
-"SolarField - Heat transfer rate (W)"
+"SolarField - Heat transfer rate (W)",
+"Reservoir - Temperature (°C)"
 ]
 
 entry_data_filtrado = entry_data[entry_data['Entry data:'].isin(userows_entry_data)]
