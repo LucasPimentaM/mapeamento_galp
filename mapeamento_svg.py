@@ -10,7 +10,8 @@ userows_entry_data = [
     "Brackish water temperature at the entrance of the regulating tank =",
     "Brackish water salinity at the entrance of the regulating tank =",
     "Temperature at the entrance of the cold side =",
-    "Heating heat exchanger mass flow rate ="
+    "Heating heat exchanger mass flow rate =",
+    "Motor power demanded/generated ="
 ]
 
 usecols_report = [
@@ -68,7 +69,26 @@ usecols_report = [
 "PVT - Heat transfer rate (W)",
 "ETC - Heat transfer rate (W)",
 "SolarField - Heat transfer rate (W)",
-"Reservoir - Temperature (°C)"
+"Reservoir - Temperature (°C)",
+"Mix Valve - Mass flow rate in from reservoir(kg/s)",
+"Mix Valve - Temperature in from reservoir(kg/s)",
+"Mix Valve - Out Temperature (°C)",
+"Mix Valve - Out Mass flow rate (kg/s)",
+"Motor - Outlet mass flow rate (kg/s)",
+"Motor - Outlet temperature motor (°C)",
+"Motor - Radiator in mass flow rate (kg/s)",
+"Motor - Radiator bypass mass flow rate (kg/s)",
+"Motor - Recirculation mass flow rate (kg/s)",
+"Motor - Nominal Mass flow rate (kg/s)",
+"Motor - Mixture temperature engine (°C)",
+"Motor - Mixture temperature radiator (°C)",
+"Motor - Oulet temperature radiator (°C)",
+"Motor - Heat coolant (kW)",
+"Motor - System efficiency",
+"Motor - Electrical energy generated/demanded (kWh)",
+"Motor - Fuel consumed (L)",
+"Motor - Fuel consumption (L/h)",
+"Motor - Fuel consumption (g/kWh)"
 ]
 
 entry_data_filtrado = entry_data[entry_data['Entry data:'].isin(userows_entry_data)]
@@ -78,7 +98,7 @@ report_filtrado = report.filter(items=usecols_report)
 report_filtrado = report_filtrado.iloc[[report_filtrado['SolarField - Solar irradiance (W/m²)'].idxmax()]].reset_index(drop=True)
 
 # Caminho para o arquivo SVG
-arquivo_svg = 'Diag_geral_24.02.2025.svg'
+arquivo_svg = 'Diag_geral_2025_04_10.svg'
 
 # Parse o arquivo SVG
 tree = ET.parse(arquivo_svg)
@@ -153,16 +173,21 @@ film_wall_temp = report_filtrado['Desal - Film wall temperature (°C)'].iloc[0]
 gap_film_boundary_temp = report_filtrado['Desal - Gap film boundary temperature (°C)'].iloc[0]
 average_temp = str(round((film_wall_temp + gap_film_boundary_temp) / 2, 2)) + " °C"
 
+motor_flow_rate_combined = str(round(report_filtrado['Motor - Radiator in mass flow rate (kg/s)'].iloc[0] + report_filtrado['Motor - Radiator bypass mass flow rate (kg/s)'].iloc[0], 2)) + " kg/s"
+
 for coluna, valor in report_filtrado.items():
     valor = valor.iloc[0]
     grandeza = ""
     if '(' in coluna and ')' in coluna:
         unidade = coluna[coluna.rfind('(') + 1:coluna.rfind(')')]
         unidade = unidade.strip()
-    elif coluna == "SolarField - Efficiency" or coluna == "PVT - Thermal Efficiency" or coluna == "ETC - Efficiency" or coluna == "PVT - Electrical Efficiency":
+    elif coluna == "SolarField - Efficiency" or coluna == "PVT - Thermal Efficiency" or coluna == "ETC - Efficiency" or coluna == "PVT - Electrical Efficiency" or coluna == "Motor - System efficiency":
         unidade = "%"
     else:
         unidade = ""
+    if coluna == "PVT - Heat transfer rate (W)" or coluna == "SolarField - Heat transfer rate (W)" or coluna == "ETC - Heat transfer rate (W)" or coluna == "PVT - Electrical power output (W)":
+        unidade = "kW"
+        valor = "{:.2f}".format(float(valor/1000))
     if unidade == '°C':
         grandeza = "T"
         valor = "{:.2f}".format(float(valor))
