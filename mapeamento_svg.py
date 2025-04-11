@@ -184,7 +184,7 @@ film_wall_temp = report_filtrado['Desal - Film wall temperature (°C)'].iloc[0]
 gap_film_boundary_temp = report_filtrado['Desal - Gap film boundary temperature (°C)'].iloc[0]
 average_temp = str(round((film_wall_temp + gap_film_boundary_temp) / 2, 2)) + " °C"
 
-motor_flow_rate_combined = str(round(report_filtrado['Motor - Radiator in mass flow rate (kg/s)'].iloc[0] + report_filtrado['Motor - Radiator bypass mass flow rate (kg/s)'].iloc[0], 2)) + " kg/s"
+motor_flow_rate_combined = "ṁ " + str(round(report_filtrado['Motor - Radiator in mass flow rate (kg/s)'].iloc[0] + report_filtrado['Motor - Radiator bypass mass flow rate (kg/s)'].iloc[0], 2)) + " kg/s"
 
 for coluna, valor in report_filtrado.items():
     valor = valor.iloc[0]
@@ -250,6 +250,7 @@ substituir_texto_por_label("ColdHex - Hot side salinity 1 (wt%)", hss1_g_l)
 substituir_texto_por_label("ColdHex - Hot side salinity 2 (wt%)", hss2_g_l)
 substituir_texto_por_label("Brackish water salinity at the entrance of the regulating tank =", bws_g_l)
 substituir_texto_por_label("FeedTank - Water salinity (wt%)", fts_g_l)
+substituir_texto_por_label("Motor - Radiator in mass flow rate (kg/s) + Motor - Radiator bypass mass flow rate (kg/s)", motor_flow_rate_combined)
 
 # correção do valor de total de água produzida
 substituir_texto_por_label("Desal - Total water produced (kg)", total_water_produced_l)

@@ -7,8 +7,8 @@
    viewBox="0 0 841 1189"
    version="1.1"
    id="svg1"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="Diag_geral_2025_04_10.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="Diag_geral_2025_04_11.svg"
    inkscape:export-filename="Figure2.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
@@ -28,12 +28,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.58058349"
-     inkscape:cx="1589.4806"
-     inkscape:cy="2748.4628"
-     inkscape:window-width="1642"
-     inkscape:window-height="899"
-     inkscape:window-x="70"
-     inkscape:window-y="27"
+     inkscape:cx="1240.1317"
+     inkscape:cy="1647.4805"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:export-bgcolor="#ffffffff"
@@ -307,53 +307,53 @@
        transform="translate(-431.61086,-847.19475)"><tspan
          x="-339.77615"
          y="368.61334"
-         id="tspan262562"><tspan
+         id="tspan22"><tspan
            style="font-weight:bold"
-           id="tspan262558">All systems conected in parallel.</tspan><tspan
+           id="tspan20">All systems conected in parallel.</tspan><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan262560">
+           id="tspan21">
 </tspan></tspan><tspan
          x="-339.77615"
-         y="383.47028"
-         id="tspan262566"><tspan
+         y="383.57488"
+         id="tspan24"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan262564">
+           id="tspan23">
 </tspan></tspan><tspan
          x="-339.77615"
-         y="398.32721"
-         id="tspan262570"><tspan
+         y="398.53642"
+         id="tspan29"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan262568">- 1 Diesel generator Toyama TDMG25SE3D-ATS 20kW  
+           id="tspan28">- 1 Diesel generator Toyama TDMG25SE3D-ATS 20kW  
 </tspan></tspan><tspan
          x="-339.77615"
-         y="413.18414"
-         id="tspan262574"><tspan
+         y="413.49797"
+         id="tspan31"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan262572">- 1 HCPV panel BSQ Solar
+           id="tspan30">- 1 HCPV panel BSQ Solar
 </tspan></tspan><tspan
          x="-339.77615"
-         y="428.04108"
-         id="tspan262578"><tspan
+         y="428.45952"
+         id="tspan33"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan262576">- 12 Flat plate collectors Lira 200
+           id="tspan32">- 12 Flat plate collectors Lira 200
 </tspan></tspan><tspan
          x="-339.77615"
-         y="442.89801"
-         id="tspan262582"><tspan
+         y="443.42107"
+         id="tspan35"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan262580">- 2 Evacuated tube collectors SolarVac
+           id="tspan34">- 2 Evacuated tube collectors SolarVac
 </tspan></tspan><tspan
          x="-339.77615"
-         y="457.75494"
-         id="tspan262586"><tspan
+         y="458.38262"
+         id="tspan37"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan262584">- 2 Photovoltaic-thermal modules Abora ah72SK
+           id="tspan36">- 2 Photovoltaic-thermal modules Abora ah72SK
 </tspan></tspan><tspan
          x="-339.77615"
-         y="472.61188"
-         id="tspan262590"><tspan
+         y="473.34416"
+         id="tspan42"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan262588">- Arrays with 2 modules in series
+           id="tspan40">- Arrays with 2 modules in series
 </tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -644,31 +644,31 @@
     <text
        xml:space="preserve"
        style="font-size:9.87778px;line-height:1.05;font-family:'David Libre';-inkscape-font-specification:'David Libre';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="-545.32141"
-       y="-19.638836"
+       x="-548.51141"
+       y="12.717262"
        id="text764968-1"
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
        inkscape:label="HCPV - Outlet temperature (°C)"><tspan
          sodipodi:role="line"
-         x="-545.32141"
-         y="-19.638836"
+         x="-548.51141"
+         y="12.717262"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#005fff;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan764966-1"> T = 56.14°C</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.87778px;line-height:1.05;font-family:'David Libre';-inkscape-font-specification:'David Libre';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="-547.20203"
-       y="12.022898"
+       x="-546.29059"
+       y="-19.877481"
        id="text764972-8"
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
        inkscape:label="HCPV - Inlet temperature (°C)"><tspan
          sodipodi:role="line"
-         x="-547.20203"
-         y="12.022898"
+         x="-546.29059"
+         y="-19.877481"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#005fff;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan764970-3">T = 59.65°C</tspan></text>
     <text
@@ -909,21 +909,21 @@
        transform="translate(-273.64406,268.06902)"><tspan
          x="-115.23868"
          y="-129.20772"
-         id="tspan262594"><tspan
+         id="tspan47"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ff1c00"
-           id="tspan262592">Heat transfer 
+           id="tspan44">Heat transfer 
 </tspan></tspan><tspan
          x="-115.23868"
-         y="-118.80784"
-         id="tspan262598"><tspan
+         y="-118.73463"
+         id="tspan51"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ff1c00"
-           id="tspan262596">rate recovered 
+           id="tspan49">rate recovered 
 </tspan></tspan><tspan
          x="-115.23868"
-         y="-108.40797"
-         id="tspan262602"><tspan
+         y="-108.26155"
+         id="tspan56"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ff1c00"
-           id="tspan262600">= </tspan></tspan></text>
+           id="tspan53">= </tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.87778px;line-height:1.05;font-family:'David Libre';-inkscape-font-specification:'David Libre';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
