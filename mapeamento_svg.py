@@ -10,8 +10,7 @@ userows_entry_data = [
     "Brackish water temperature at the entrance of the regulating tank =",
     "Brackish water salinity at the entrance of the regulating tank =",
     "Temperature at the entrance of the cold side =",
-    "Heating heat exchanger mass flow rate =",
-    "Motor power demanded/generated ="
+    "Motor power demanded/generated =",
     "Electrolyzer cell temperature =",
     "Cathode pressure ="
 
