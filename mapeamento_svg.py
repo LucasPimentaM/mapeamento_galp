@@ -12,6 +12,9 @@ userows_entry_data = [
     "Temperature at the entrance of the cold side =",
     "Heating heat exchanger mass flow rate =",
     "Motor power demanded/generated ="
+    "Electrolyzer cell temperature =",
+    "Cathode pressure ="
+
 ]
 
 usecols_report = [
@@ -88,7 +91,15 @@ usecols_report = [
 "Motor - Electrical energy generated/demanded (kWh)",
 "Motor - Fuel consumed (L)",
 "Motor - Fuel consumption (L/h)",
-"Motor - Fuel consumption (g/kWh)"
+"Motor - Fuel consumption (g/kWh)",
+"Electrolyzer - Hydrogen flow rate (Nm³/h)",
+"Electrolyzer - Hydrogen produced (Nm³)",
+"Electrolyzer - Water consumption rate (kg/h)",
+"Electrolyzer - Water consumed (kg)",
+"Electrolyzer - Conversion efficiency (%)",
+"Electrolyzer - Heat transfer rate generated (W)",
+"Electrolyzer - Power demand (W)",
+"Electrolyzer - Electricity demand (kWh)"
 ]
 
 entry_data_filtrado = entry_data[entry_data['Entry data:'].isin(userows_entry_data)]
@@ -98,7 +109,7 @@ report_filtrado = report.filter(items=usecols_report)
 report_filtrado = report_filtrado.iloc[[report_filtrado['SolarField - Solar irradiance (W/m²)'].idxmax()]].reset_index(drop=True)
 
 # Caminho para o arquivo SVG
-arquivo_svg = 'Diag_geral_2025_04_10.svg'
+arquivo_svg = 'Diag_geral_2025_04_11.svg'
 
 # Parse o arquivo SVG
 tree = ET.parse(arquivo_svg)
@@ -185,8 +196,12 @@ for coluna, valor in report_filtrado.items():
         unidade = "%"
     else:
         unidade = ""
-    if coluna == "PVT - Heat transfer rate (W)" or coluna == "SolarField - Heat transfer rate (W)" or coluna == "ETC - Heat transfer rate (W)" or coluna == "PVT - Electrical power output (W)":
+    if coluna == "PVT - Heat transfer rate (W)" or coluna == "SolarField - Heat transfer rate (W)" or coluna == "ETC - Heat transfer rate (W)" or coluna == "PVT - Electrical power output (W)" or coluna == "Electrolyzer - Heat transfer rate generated (W)" or coluna == "Electrolyzer - Power demand (W)":
         unidade = "kW"
+        valor = "{:.2f}".format(float(valor/1000))
+    if coluna == "HotHex - Heat transfer rate (W)" or coluna == "ColdHex - Heat transfer rate (W)":
+        unidade = "kW"
+        grandeza = "Q"
         valor = "{:.2f}".format(float(valor/1000))
     if unidade == '°C':
         grandeza = "T"
