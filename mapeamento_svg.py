@@ -13,7 +13,6 @@ userows_entry_data = [
     "Motor power demanded/generated =",
     "Electrolyzer cell temperature =",
     "Cathode pressure ="
-
 ]
 
 usecols_report = [
@@ -227,6 +226,8 @@ for linha in entry_data_filtrado.itertuples():
     unidade = linha[3].strip()
     if unidade == '°C':
         grandeza = "T"
+        if label == "Electrolyzer cell temperature =":
+            grandeza = ""
         valor = "{:.2f}".format(float(valor))
     if unidade == 'kg/s':
         grandeza = "ṁ"
@@ -239,7 +240,6 @@ for linha in entry_data_filtrado.itertuples():
         valor = "{:.2f}".format(float(valor))
 
     valor_novo = grandeza + " " + str(valor) + ' ' + unidade
-    #print(valor_novo)
     substituir_texto_por_label(label, str(valor_novo))
 
 substituir_texto_por_label("HotHex - Cold side salinity 1 (wt%)", css1_g_l)
