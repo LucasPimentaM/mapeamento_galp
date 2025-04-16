@@ -107,7 +107,7 @@ report_filtrado = report.filter(items=usecols_report)
 report_filtrado = report_filtrado.iloc[[report_filtrado['SolarField - Solar irradiance (W/m²)'].idxmax()]].reset_index(drop=True)
 
 # Caminho para o arquivo SVG
-arquivo_svg = 'Diag_geral_2025_04_11.svg'
+arquivo_svg = 'Diag_geral_2025_04_16.svg'
 
 # Parse o arquivo SVG
 tree = ET.parse(arquivo_svg)
