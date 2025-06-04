@@ -7,8 +7,8 @@
    viewBox="0 0 841 1189"
    version="1.1"
    id="svg1"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="Diag_geral_2025_06_03.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="Diag_geral_2025_06_04.svg"
    inkscape:export-filename="Figure2.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
@@ -27,13 +27,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.20526726"
-     inkscape:cx="3285.96"
-     inkscape:cy="2080.2149"
-     inkscape:window-width="1642"
-     inkscape:window-height="899"
-     inkscape:window-x="70"
-     inkscape:window-y="27"
+     inkscape:zoom="0.58058349"
+     inkscape:cx="2605.1378"
+     inkscape:cy="433.1849"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:export-bgcolor="#ffffffff"
@@ -281,7 +281,7 @@
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
-       inkscape:label="Reservoir - Temperature (°C)"><tspan
+       inkscape:label="Central Reservoir - Temperature (°C)"><tspan
          sodipodi:role="line"
          x="-462.90982"
          y="-16.771839"
@@ -314,53 +314,53 @@
        transform="translate(-431.61086,-847.19475)"><tspan
          x="-339.77615"
          y="368.61334"
-         id="tspan572514"><tspan
+         id="tspan22"><tspan
            style="font-weight:bold"
-           id="tspan572510">All systems conected in parallel.</tspan><tspan
+           id="tspan20">All systems conected in parallel.</tspan><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572512">
+           id="tspan21">
 </tspan></tspan><tspan
          x="-339.77615"
-         y="383.47028"
-         id="tspan572518"><tspan
+         y="383.7787"
+         id="tspan24"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572516">
+           id="tspan23">
 </tspan></tspan><tspan
          x="-339.77615"
-         y="398.32721"
-         id="tspan572522"><tspan
+         y="398.94404"
+         id="tspan29"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572520">- 1 Diesel generator Toyama TDMG25SE3D-ATS 20kW  
+           id="tspan28">- 1 Diesel generator Toyama TDMG25SE3D-ATS 20kW  
 </tspan></tspan><tspan
          x="-339.77615"
-         y="413.18414"
-         id="tspan572526"><tspan
+         y="414.10939"
+         id="tspan31"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572524">- 1 HCPV panel BSQ Solar
+           id="tspan30">- 1 HCPV panel BSQ Solar
 </tspan></tspan><tspan
          x="-339.77615"
-         y="428.04108"
-         id="tspan572530"><tspan
+         y="429.27473"
+         id="tspan33"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572528">- 12 Flat plate collectors Lira 200
+           id="tspan32">- 12 Flat plate collectors Lira 200
 </tspan></tspan><tspan
          x="-339.77615"
-         y="442.89801"
-         id="tspan572534"><tspan
+         y="444.44008"
+         id="tspan35"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572532">- 2 Evacuated tube collectors SolarVac
+           id="tspan34">- 2 Evacuated tube collectors SolarVac
 </tspan></tspan><tspan
          x="-339.77615"
-         y="457.75494"
-         id="tspan572538"><tspan
+         y="459.60542"
+         id="tspan37"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572536">- 2 Photovoltaic-thermal modules Abora ah72SK
+           id="tspan36">- 2 Photovoltaic-thermal modules Abora ah72SK
 </tspan></tspan><tspan
          x="-339.77615"
-         y="472.61188"
-         id="tspan572542"><tspan
+         y="474.77077"
+         id="tspan42"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572540">- Arrays with 2 modules in series
+           id="tspan40">- Arrays with 2 modules in series
 </tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -732,7 +732,7 @@
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
-       inkscape:label="Mix Valve - Temperature in from reservoir(kg/s)"><tspan
+       inkscape:label="Mix Valve - Temperature in from central reservoir(kg/s)"><tspan
          sodipodi:role="line"
          x="-352.45969"
          y="19.063198"
@@ -861,7 +861,7 @@
     <text
        xml:space="preserve"
        style="font-size:9.87778px;line-height:1.05;font-family:'David Libre';-inkscape-font-specification:'David Libre';display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="-477.20868"
+       x="-480.9129"
        y="386.90353"
        id="text520-7-0-2"
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
@@ -869,13 +869,13 @@
        inkscape:export-ydpi="300"
        inkscape:label="wp"><tspan
          sodipodi:role="line"
-         x="-477.20868"
+         x="-480.9129"
          y="386.90353"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan204926">Overall net water  </tspan><tspan
          sodipodi:role="line"
-         x="-477.20868"
-         y="397.30341"
+         x="-480.9129"
+         y="397.51929"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan220634">produced = </tspan></text>
     <script
@@ -921,21 +921,21 @@
        transform="translate(-273.64406,268.06902)"><tspan
          x="-115.23868"
          y="-129.20772"
-         id="tspan572546"><tspan
+         id="tspan46"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ff1c00"
-           id="tspan572544">Heat transfer 
+           id="tspan44">Heat transfer 
 </tspan></tspan><tspan
          x="-115.23868"
-         y="-118.80784"
-         id="tspan572550"><tspan
+         y="-118.59197"
+         id="tspan49"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ff1c00"
-           id="tspan572548">rate recovered 
+           id="tspan47">rate recovered 
 </tspan></tspan><tspan
          x="-115.23868"
-         y="-108.40797"
-         id="tspan572554"><tspan
+         y="-107.97622"
+         id="tspan53"><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ff1c00"
-           id="tspan572552">= </tspan></tspan></text>
+           id="tspan51">= </tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:9.87778px;line-height:1.05;font-family:'David Libre';-inkscape-font-specification:'David Libre';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1177,7 +1177,7 @@
     <text
        xml:space="preserve"
        style="font-size:9.87778px;line-height:1.05;font-family:'David Libre';-inkscape-font-specification:'David Libre';display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="-429.1709"
+       x="-433.4043"
        y="397.50861"
        id="text46"
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
@@ -1185,7 +1185,7 @@
        inkscape:export-ydpi="300"
        inkscape:label="Overall - Net water production (L)"><tspan
          sodipodi:role="line"
-         x="-429.1709"
+         x="-433.4043"
          y="397.50861"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0957;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan117875">xxx L</tspan></text>
@@ -1333,7 +1333,7 @@
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
-       inkscape:label="Mix Valve - Mass flow rate in from reservoir(kg/s)"
+       inkscape:label="Mix Valve - Mass flow rate in from central reservoir(kg/s)"
        inkscape:highlight-color="#008000"><tspan
          sodipodi:role="line"
          x="-351.56693"
@@ -1685,7 +1685,7 @@
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
-       inkscape:label="Mix Valve - Mass flow rate in from reservoir(kg/s)"
+       inkscape:label="Mix Valve - Mass flow rate in from central reservoir(kg/s)"
        inkscape:highlight-color="#008000"><tspan
          sodipodi:role="line"
          x="-351.56693"
@@ -2484,7 +2484,7 @@
     <text
        xml:space="preserve"
        style="font-size:12.1458px;line-height:1.05;font-family:'David Libre';-inkscape-font-specification:'David Libre';display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.943101;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="-638.76538"
+       x="-642.40851"
        y="542.81006"
        id="text19-7"
        inkscape:export-filename="D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
@@ -2493,7 +2493,7 @@
        inkscape:label="RO Feedtank - Salinity (wt%)"
        transform="scale(1.0167167,0.98355815)"><tspan
          sodipodi:role="line"
-         x="-638.76538"
+         x="-642.40851"
          y="542.81006"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.1458px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.943101;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan19-5"> s = xxx g/l</tspan></text>
@@ -2630,11 +2630,11 @@
        transform="translate(156.39148,-850.36977)"><tspan
          x="-339.77615"
          y="368.61334"
-         id="tspan572560"><tspan
+         id="tspan58"><tspan
            style="font-weight:bold"
-           id="tspan572556">Overall results at final time</tspan><tspan
+           id="tspan56">Overall results at final time</tspan><tspan
            style="font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '"
-           id="tspan572558">
+           id="tspan57">
 </tspan></tspan></text>
     <text
        xml:space="preserve"
@@ -2659,7 +2659,7 @@
        inkscape:export-filename="../../../../../../../../../Downloads/D:\Área de Trabalho\Brahmala\1 - Estudos\2 - Mestrado\Dissertacao\Texto\ISOS integ.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
-       inkscape:label="Overall - Net water production (L)"><tspan
+       inkscape:label="Overall - Net water production - ft - (L)"><tspan
          sodipodi:role="line"
          x="-13.730229"
          y="-439.90988"
