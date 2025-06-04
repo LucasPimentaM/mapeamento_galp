@@ -148,7 +148,8 @@ usecols_report = [
 "Central Reservoir - Temperature (°C)",
 "Overall - Net electricity generation (kWh)",
 "Overall - Net heat recovered (kWh)",
-"Overall - Salinity of the treated water (wt%)"
+"Overall - Salinity of the treated water (wt%)",
+"Motor - Heat transfer rate (kW)"
 ]
 
 # %% [markdown]
@@ -184,11 +185,6 @@ print("Net water production:", net_water_production)
 
 net_heat_recovered = str(round(float(report_filtrado_tempo_final['Overall - Net heat recovered (kWh)'].iloc[0]), 2)) + " kWh"
 print("Net heat recovered:", net_heat_recovered)
-
-# Salinity of the treated water
-
-salinity_treated_water = str(round(float(report_filtrado_tempo_final['Overall - Salinity of the treated water (wt%)'].iloc[0]), 2)) + " wt%"
-print("Salinity of the treated water:", salinity_treated_water)
 
 
 # %% [markdown]
@@ -325,43 +321,45 @@ hss2_g_l = "s " + str(round(S_hss2 * salt_water_density(T_hss2, S_hss2), 2)) + "
 
 T_fts = float(report_filtrado['FeedTank - Water temperature (°C)'].iloc[0])
 S_fts = float(report_filtrado['FeedTank - Water salinity (wt%)'].iloc[0]/100)
-print("S_fts:", S_fts)
 fts_g_l = "s " + str(round(S_fts * salt_water_density(T_fts, S_fts), 2)) + " g/l"
-print("FeedTank - Water salinity (g/L):", fts_g_l)
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #### RO Module - Brine outlet salinity (wt%) -> está presente na oitava instância de salinidade
 # A temperatura da oitava instância está na variável -> RO Feedtank - Temperature (°C)
 T_ros = float(report_filtrado['RO Feedtank - Temperature (°C)'].iloc[0])
 S_ros = float(report_filtrado['RO Module - Brine outlet salinity (wt%)'].iloc[0]/100)
-print(S_ros)
 ros_g_l = "s " + str(round(S_ros * salt_water_density(T_ros, S_ros), 2)) + " g/l"
-print(ros_g_l)
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 # RO feedtank brackish water salinity =
-ro_feedtank_brackish_water_salinity = entry_data_filtrado[entry_data_filtrado['Entry data:'] == 'RO feedtank brackish water salinity =']['Unnamed: 1'].iloc[0]
+ro_feedtank_brackish_water_salinity = float(entry_data_filtrado[entry_data_filtrado['Entry data:'] == 'RO feedtank brackish water salinity =']['Unnamed: 1'].iloc[0])/100
 # RO feedtank brackish water temperature =
 ro_feedtank_brackish_water_temperature = entry_data_filtrado[entry_data_filtrado['Entry data:'] == 'RO feedtank brackish water temperature =']['Unnamed: 1'].iloc[0]
 
 # RO feedtank brackish water salinity g/L
-ro_feedtank_brackish_water_salinity_g_l = "s " + str(round(float(ro_feedtank_brackish_water_salinity) * salt_water_density(float(ro_feedtank_brackish_water_temperature), float(ro_feedtank_brackish_water_salinity)/100), 2)) + " g/l"
+ro_feedtank_brackish_water_salinity_g_l = "s " + str(round(float(ro_feedtank_brackish_water_salinity) * salt_water_density(float(ro_feedtank_brackish_water_temperature), ro_feedtank_brackish_water_salinity), 2)) + " g/l"
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # RO Feedtank - Salinity (wt%)
 
-ro_feedtank_salinity = report_filtrado['RO Feedtank - Salinity (wt%)'].iloc[0]
-print("RO Feedtank - Salinity (wt%):", ro_feedtank_salinity)
-ro_feedtank_salinity_g_l = "s " + str(round(float(report_filtrado['RO Feedtank - Salinity (wt%)'].iloc[0]) * salt_water_density(float(report_filtrado['RO Feedtank - Temperature (°C)'].iloc[0]), float(report_filtrado['RO Feedtank - Salinity (wt%)'].iloc[0])/100), 2)) + " g/l"
-print ("RO Feedtank - Salinity (g/L):", ro_feedtank_salinity_g_l)
+ro_feedtank_salinity = float(report_filtrado['RO Feedtank - Salinity (wt%)'].iloc[0])/100
+ro_feedtank_temperature = report_filtrado['RO Feedtank - Temperature (°C)'].iloc[0]
+ro_feedtank_salinity_g_l = "s " + str(round(float(ro_feedtank_salinity) * salt_water_density(float(ro_feedtank_temperature), ro_feedtank_salinity), 2)) + " g/l"
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # RO Module - Permeate salinity (wt%)
-ro_module_permeate_salinity = report_filtrado['RO Module - Permeate salinity (wt%)'].iloc[0]
-print("RO Module - Permeate salinity (wt%):", ro_module_permeate_salinity)
-ro_module_permeate_salinity_g_l = "s " + str(round(float(report_filtrado['RO Module - Permeate salinity (wt%)'].iloc[0]) * salt_water_density(float(report_filtrado['RO Feedtank - Temperature (°C)'].iloc[0]), float(report_filtrado['RO Module - Permeate salinity (wt%)'].iloc[0])/100), 2)) + " g/l"
-print("RO Module - Permeate salinity (g/L):", ro_module_permeate_salinity_g_l)
+ro_module_permeate_salinity = float(report_filtrado['RO Module - Permeate salinity (wt%)'].iloc[0])/100
+ro_module_permeate_salinity_g_l = "s " + str(round(ro_module_permeate_salinity * salt_water_density(float(report_filtrado['RO Feedtank - Temperature (°C)'].iloc[0]), ro_module_permeate_salinity), 2)) + " g/l"
+
+
+# calculando o Salinity of the treated water
+
+salinity_treated_water = float(report_filtrado_tempo_final['Overall - Salinity of the treated water (wt%)'].iloc[0]/100)
+salinity_treated_water_temperature = 25 # assumindo temperatura ambiente de 25°C
+salinity_treated_water_g_l = "s " + str(round(salinity_treated_water * salt_water_density(salinity_treated_water_temperature,salinity_treated_water), 2)) + " g/l"
+print("Salinity of the treated water:", salinity_treated_water)
+print("Salinity of the treated water:", salinity_treated_water_g_l)
 
 # %% [markdown]
 # #### Passando o Desal - Total water produced (kg) para litro -> vamos dividir o valor em kg por 0.998
@@ -394,7 +392,8 @@ print(motor_flow_rate_combined)
 #[RO Module - Brine outflow rate (kg/h)] - [FeedTank - Brackish water inlet flow rate (kg/h)]
 
 ro_brine_calc = report_filtrado['RO Module - Brine outflow rate (kg/h)'].iloc[0] - report_filtrado['FeedTank - Brackish water inlet flow rate (kg/h)'].iloc[0]
-ro_brine_calc = "ṁ " + str(round(ro_brine_calc/3600, 2)) + " kg/s"
+#ro_brine_calc = "ṁ " + str(round(ro_brine_calc/3600, 2)) + " kg/s"
+ro_brine_calc = "ṁ " + str(round(ro_brine_calc, 2)) + " kg/h"
 print(ro_brine_calc)
 
 
@@ -404,8 +403,9 @@ print(ro_brine_calc)
 # %%
 #[RO Feedtank - Mass outflow rate (kg/h)] - ([RO Module - Brine outflow rate (kg/h)] - [FeedTank - Brackish water inlet flow rate (kg/h)])
 
-ro_feedtank_calc = float(report_filtrado['RO Feedtank - Mass outflow rate (kg/h)'].iloc[0])/3600 - float(ro_brine_calc.split(" ")[1])
-ro_feedtank_calc = "ṁ " + str(round(float(ro_feedtank_calc), 2)) + " kg/s"
+ro_feedtank_calc = float(report_filtrado['RO Feedtank - Mass outflow rate (kg/h)'].iloc[0]) - float(ro_brine_calc.split(" ")[1])
+#ro_feedtank_calc = "ṁ " + str(round(float(ro_feedtank_calc/3600), 2)) + " kg/s"
+ro_feedtank_calc = "ṁ " + str(round(float(ro_feedtank_calc), 2)) + " kg/h"
 print(ro_feedtank_calc)
 
 # %% [markdown]
@@ -414,8 +414,9 @@ print(ro_feedtank_calc)
 # %%
 # [RO Feedtank - Mass outflow rate (kg/h)] - [RO Module - Brine outflow rate (kg/h)]
 
-ro_feedtank_brine_calc = float(report_filtrado['RO Feedtank - Mass outflow rate (kg/h)'].iloc[0])/3600 - float(report_filtrado['RO Module - Brine outflow rate (kg/h)'].iloc[0])/3600
-ro_feedtank_brine_calc = "ṁ " + str(round(float(ro_feedtank_brine_calc), 2)) + " kg/s"
+ro_feedtank_brine_calc = float(report_filtrado['RO Feedtank - Mass outflow rate (kg/h)'].iloc[0]) - float(report_filtrado['RO Module - Brine outflow rate (kg/h)'].iloc[0])
+#ro_feedtank_brine_calc = "ṁ " + str(round(float(ro_feedtank_brine_calc)/3600, 2)) + " kg/s"
+ro_feedtank_brine_calc = "ṁ " + str(round(float(ro_feedtank_brine_calc), 2)) + " kg/h"
 print(ro_feedtank_brine_calc)
 
 # %% [markdown]
@@ -439,10 +440,10 @@ for coluna, valor in report_filtrado.items():
         unidade = "kW"
         grandeza = "Q"
         valor = "{:.2f}".format(float(valor/1000))
-    if coluna == "RO Module - Brine outflow rate (kg/h)" or coluna == "FeedTank - Brackish water inlet flow rate (kg/h)" or coluna == "RO Feedtank - Mass outflow rate (kg/h)":
-        unidade = "kg/s"
-        grandeza = "ṁ"
-        valor = "{:.2f}".format(float(valor/3600))
+    #if coluna == "RO Module - Brine outflow rate (kg/h)" or coluna == "FeedTank - Brackish water inlet flow rate (kg/h)" or coluna == "RO Feedtank - Mass outflow rate (kg/h)":
+    #    unidade = "kg/s"
+    #    grandeza = "ṁ"
+    #    valor = "{:.2f}".format(float(valor/3600))
     if unidade == '°C':
         grandeza = "T"
         valor = "{:.2f}".format(float(valor))
@@ -478,10 +479,10 @@ for linha in entry_data_filtrado.itertuples():
     if unidade == 'kg/h' or unidade == 'Kg/h':
         grandeza = "ṁ"
         valor = "{:.2f}".format(float(valor))
-        if label == "Brine flow rate out of the regulating tank =":
-            grandeza = "ṁ"
-            unidade = "kg/s"
-            valor = "{:.2f}".format(float(valor)/3600)
+        #if label == "Brine flow rate out of the regulating tank =":
+        #    grandeza = "ṁ"
+        #    unidade = "kg/s"
+        #    valor = "{:.2f}".format(float(valor)/3600)
     if unidade == 'g/L':
         grandeza = "S"
         valor = "{:.2f}".format(float(valor))
@@ -527,7 +528,7 @@ substituir_texto_por_label("[RO Feedtank - Mass outflow rate (kg/h)] - [RO Modul
 substituir_texto_por_label("Overall - Net electricity generation (kWh)", net_electricity_generation)
 substituir_texto_por_label("Overall - Net water production - ft - (L)", net_water_production)
 substituir_texto_por_label("Overall - Net heat recovered (kWh)", net_heat_recovered)
-substituir_texto_por_label("Overall - Salinity of the treated water (wt%)", salinity_treated_water)
+substituir_texto_por_label("Overall - Salinity of the treated water (wt%)", salinity_treated_water_g_l)
 
 # %% [markdown]
 # ##### Salvando o arquivo
