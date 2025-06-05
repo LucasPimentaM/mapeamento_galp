@@ -202,7 +202,7 @@ report_filtrado.head()
 
 # %%
 # Caminho para o arquivo SVG
-arquivo_svg = 'Diag_geral_2025_06_04.svg'
+arquivo_svg = 'Diag_geral_2025_06_05.svg'
 
 # Parse o arquivo SVG
 tree = ET.parse(arquivo_svg)
@@ -357,7 +357,7 @@ ro_module_permeate_salinity_g_l = "s " + str(round(ro_module_permeate_salinity *
 
 salinity_treated_water = float(report_filtrado_tempo_final['Overall - Salinity of the treated water (wt%)'].iloc[0]/100)
 salinity_treated_water_temperature = 25 # assumindo temperatura ambiente de 25°C
-salinity_treated_water_g_l = "s " + str(round(salinity_treated_water * salt_water_density(salinity_treated_water_temperature,salinity_treated_water), 2)) + " g/l"
+salinity_treated_water_g_l = " " + str(round(salinity_treated_water * salt_water_density(salinity_treated_water_temperature,salinity_treated_water), 2)) + " g/l"
 print("Salinity of the treated water:", salinity_treated_water)
 print("Salinity of the treated water:", salinity_treated_water_g_l)
 
