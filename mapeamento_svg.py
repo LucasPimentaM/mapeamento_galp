@@ -202,7 +202,7 @@ report_filtrado.head()
 
 # %%
 # Caminho para o arquivo SVG
-arquivo_svg = 'Diag_geral_2025_06_05.svg'
+arquivo_svg = 'Diag_geral_2025_07_01.svg'
 
 # Parse o arquivo SVG
 tree = ET.parse(arquivo_svg)
